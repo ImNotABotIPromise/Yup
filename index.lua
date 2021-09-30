@@ -307,9 +307,7 @@ end
 function App.Load(settings)
 	local Gui, Impo = createGui(settings)
 
-	local Functions = {
-		Icons = App.Icons
-	}
+	local Functions = {}
 
 	--
 
@@ -1584,4 +1582,276 @@ function App.Load(settings)
 	return Functions
 end
 
-return App
+-- return App
+
+App = App.Load({
+	Name = "Gui"
+})
+
+local Page = App.New({
+	Name = "Home",
+	Active = true,
+
+	Image = {
+		Link = "rbxassetid://3926305904",
+		Size = UDim2.new(0, 20, 0, 20),
+
+		RectSize = Vector2.new(36, 36),
+		RectOffset = Vector2.new(964, 204),
+
+		Round = UDim.new(0, 0)
+	},
+
+	Overrides = {
+		ScaleType = Enum.ScaleType.Stretch,
+		SliceScale = 1
+	}
+})
+
+local Page1 = App.New({
+	Name = "Settings",
+
+	Image = {
+		Link = "rbxassetid://3926307971",
+		Size = UDim2.new(0, 20, 0, 20),
+
+		RectSize = Vector2.new(36, 36),
+		RectOffset = Vector2.new(324, 124),
+
+		Round = UDim.new(0, 0)
+	},
+
+	Overrides = {
+		ScaleType = Enum.ScaleType.Stretch,
+		SliceScale = 1
+	}
+})
+
+--
+
+Page1.Label({
+	Type = 1,
+
+	Overrides = {
+		LayoutOrder = 0
+	}
+})
+
+Page1.Label({
+	Type = 2,
+
+	Overrides = {
+		LayoutOrder = 0
+	}
+})
+
+Page1.Label({
+	Type = 3,
+
+	Overrides = {
+		LayoutOrder = 0
+	}
+})
+
+--
+
+Page.Label({
+	Type = 3,
+
+	Title = "Buttons",
+	Description = "All button types."
+})
+
+Page.Button({
+	Title = "Button",
+
+	Callback = function()
+		print("Cock 1")
+	end
+})
+
+Page.Button({
+	Title = "Button with image",
+
+	Callback = function()
+		print("Cock 2")
+	end,
+
+	Extras = {
+		Image = {
+			Link = "rbxassetid://3926307971",
+			Size = UDim2.new(0, 20, 0, 20),
+
+			RectSize = Vector2.new(36, 36),
+			RectOffset = Vector2.new(324, 124),
+
+			Round = UDim.new(0, 0)
+		}
+	},
+
+	Overrides = {
+		ScaleType = Enum.ScaleType.Stretch,
+		SliceScale = 1
+	}
+})
+
+Page.Label({
+	Type = 3,
+
+	Title = "Toggles",
+	Description = "The 2 states of the toggle."
+})
+
+Page.Toggle({
+	Title = "Toggled",
+	Toggled = true,
+
+	Callback = function(t)
+		print("1 : " .. tostring(t))
+	end
+})
+
+Page.Toggle({
+	Title = "Un-toggled",
+
+	Callback = function(t)
+		print("2 : " .. tostring(t))
+	end
+})
+
+Page.Label({
+	Type = 3,
+
+	Title = "Inputs",
+	Description = "All input types."
+})
+
+Page.Input({
+	Type = 1,
+	Title = "Input",
+	MultiLine = true,
+
+	Callback = function(e)
+		print(e)
+	end
+})
+
+Page.Input({
+	Type = 1,
+	Title = "Input",
+
+	Callback = function(e)
+		print(e)
+	end
+})
+
+Page.Input({
+	Type = 2,
+
+	Title = "Input",
+	Start = "https://",
+
+	Callback = function(e)
+		print(e)
+	end
+})
+
+Page1.Keybind({
+	Key = "E",
+	Title = "Test",
+
+	Callback = function()
+		print("e")
+	end
+})
+
+--
+
+local Section = Page1.Section({
+	Title = "Test",
+})
+
+local s1 = Page1.Slider({
+	Min = 0,
+	Max = 100,
+
+	Title = "Test",
+
+	Callback = function(s)
+		print("1 : " .. tonumber(s))
+	end
+})
+
+local s2 = Page1.Slider({
+	Min = 0,
+	Max = 100,
+	Def = 50,
+
+	Title = "Test",
+
+	Callback = function(s)
+		print("2 : " .. tonumber(s))
+	end
+})
+
+local l = Page1.Label({
+	Type = 1,
+	Title = "Text"
+})
+
+local l = Page1.Input({
+	Type = 1,
+	Text = "Test",
+	MultiLine = true
+})
+
+Section.Add(l.Object)
+Section.Add(s1.Object)
+Section.Add(s2.Object)
+
+--
+
+local Page2 = App.New({
+	Name = "Test",
+
+	Image = {
+		Link = "rbxassetid://3926307971",
+		Size = UDim2.new(0, 20, 0, 20),
+
+		RectSize = Vector2.new(36, 36),
+		RectOffset = Vector2.new(644, 404),
+
+		Round = UDim.new(0, 0)
+	},
+
+	Overrides = {
+		ScaleType = Enum.ScaleType.Stretch,
+		SliceScale = 1
+	}
+})
+
+local d = Page2.Dropdown({
+	Title = "Dropdown"
+})
+
+--
+
+Page2.Button({
+	Title = "Test",
+
+	Callback = function()
+		local Button = Page2.Button({
+			Title = "Test",
+
+			Callback = function(self)
+				self.Object:Destroy()
+				
+				for i,v in pairs(d:GetItems()) do
+					print(i, v.Name)
+				end
+			end
+		})
+
+		d.Add(Button.Object)
+	end
+})
