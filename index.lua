@@ -63,6 +63,7 @@ function createGui(settings)
 	local Gui = Instance.new("ScreenGui")
 	Gui.Parent = game:GetService("CoreGui")
 	Gui.Name = settings.Name or "Lib"
+	Gui.ResetOnSpawn = false
 
 	local Drag = Instance.new("Frame")
 	Drag.Parent = Gui
