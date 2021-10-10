@@ -88,7 +88,7 @@ function createGui(settings)
 	Topbar.Name = "Topbar"
 	Topbar.Size = UDim2.new(1, 0, 0, 50)
 	Topbar.BorderSizePixel = 0
-	Topbar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+	Topbar.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 	Topbar.ClipsDescendants = true
 
 	Round(Topbar, UDim.new(0, 3))
@@ -99,7 +99,7 @@ function createGui(settings)
 	Sidebar.Size = UDim2.new(0, 50, 1, -50)
 	Sidebar.Position = UDim2.new(0, 0, 0, 50)
 	Sidebar.BorderSizePixel = 0
-	Sidebar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Sidebar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 	Sidebar.ClipsDescendants = true
 
 	Round(Sidebar, UDim.new(0, 3))
@@ -550,7 +550,7 @@ function App.Load(settings)
 				Frame.Name = settings.Title or "Title"
 				Frame.BorderSizePixel = 0
 				Frame.Size = UDim2.new(0, Impo.Pages.AbsoluteSize.X, 0, 40)
-				Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+				Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 
 				local TextLabel = Instance.new("TextLabel")
 				TextLabel.Parent = Frame
@@ -578,7 +578,7 @@ function App.Load(settings)
 				Frame.Name = settings.Title or "Title"
 				Frame.BorderSizePixel = 0
 				Frame.Size = UDim2.new(0, Impo.Pages.AbsoluteSize.X, 0, 64)
-				Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+				Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 
 				local TextLabel = Instance.new("TextLabel")
 				TextLabel.Parent = Frame
@@ -1250,7 +1250,7 @@ function App.Load(settings)
 			Frame.Name = settings.Title or "Title"
 			Frame.BorderSizePixel = 0
 			Frame.Size = UDim2.new(0, Impo.Pages.AbsoluteSize.X, 0, 95)
-			Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+			Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 
 			local TextLabel = Instance.new("TextLabel")
 			TextLabel.Parent = Frame
@@ -1365,7 +1365,7 @@ function App.Load(settings)
 			Frame2.Parent = Frame
 			Frame2.BorderSizePixel = 0
 			Frame2.Size = UDim2.new(1, 0, 0, 40)
-			Frame2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+			Frame2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 			Frame2.ZIndex = 2
 
 			local TextLabel = Instance.new("TextLabel")
