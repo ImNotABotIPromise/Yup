@@ -7,10 +7,10 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 --
 
 function Round(Object, CornerRadius)
-	local UICorner = Instance.new("UICorner")
-	UICorner.Parent = Object
-	UICorner.Name = "UICorner"
-	UICorner.CornerRadius = CornerRadius
+	-- local UICorner = Instance.new("UICorner")
+	-- UICorner.Parent = Object
+	-- UICorner.Name = "UICorner"
+	-- UICorner.CornerRadius = CornerRadius
 end
 
 function Dragify(Obj)
