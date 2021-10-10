@@ -1566,7 +1566,7 @@ function App.Load(settings)
 
 			--
 
-			return Returned
+			return Returned, Page
 		end
 
 		--
