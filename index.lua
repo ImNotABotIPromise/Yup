@@ -1320,7 +1320,7 @@ function App.Load(settings)
 				end)
 			end)
 			
-			Frame2.ChildAdded:Connect(function()
+			Frame2.ChildRemoved:Connect(function()
 				local Size = 0
 
 				for _,v in pairs(Frame2:GetChildren()) do
