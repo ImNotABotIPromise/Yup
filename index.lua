@@ -7,10 +7,10 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 --
 
 function Round(Object, CornerRadius)
-	-- local UICorner = Instance.new("UICorner")
-	-- UICorner.Parent = Object
-	-- UICorner.Name = "UICorner"
-	-- UICorner.CornerRadius = CornerRadius
+	local UICorner = Instance.new("UICorner")
+	UICorner.Parent = Object
+	UICorner.Name = "UICorner"
+	UICorner.CornerRadius = CornerRadius
 end
 
 function Dragify(Obj)
@@ -81,7 +81,7 @@ function createGui(settings)
 	Holder.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	Holder.ClipsDescendants = true
 
-	Round(Holder, UDim.new(0, 3))
+	-- Round(Holder, UDim.new(0, 3))
 
 	local Topbar = Instance.new("Frame")
 	Topbar.Parent = Holder
@@ -91,7 +91,7 @@ function createGui(settings)
 	Topbar.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 	Topbar.ClipsDescendants = true
 
-	Round(Topbar, UDim.new(0, 3))
+	-- Round(Topbar, UDim.new(0, 3))
 
 	local Sidebar = Instance.new("Frame")
 	Sidebar.Parent = Holder
@@ -102,7 +102,7 @@ function createGui(settings)
 	Sidebar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 	Sidebar.ClipsDescendants = true
 
-	Round(Sidebar, UDim.new(0, 3))
+	-- Round(Sidebar, UDim.new(0, 3))
 
 	local Pages = Instance.new("Frame")
 	Pages.Parent = Holder
