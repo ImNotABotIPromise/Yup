@@ -788,6 +788,7 @@ function App.Load(settings)
 							TextBox.Size = UDim2.new(1, -24, 0, TextBox.TextBounds.Y)
 
 							Frame.Size = UDim2.new(0, Impo.Pages.AbsoluteSize.X, 0, (TextBox.TextBounds.Y - 14) + 40)
+							if settings.Callback then settings.Callback(TextBox.Text, Returned) end
 						end
 					end)
 
@@ -833,6 +834,7 @@ function App.Load(settings)
 							TextBox.Size = UDim2.new(1, -(TextLabel.TextBounds.X + 34), 0, TextBox.TextBounds.Y)
 
 							Frame.Size = UDim2.new(0, Impo.Pages.AbsoluteSize.X, 0, (TextBox.TextBounds.Y - 14) + 40)
+							if settings.Callback then settings.Callback(TextBox.Text, Returned) end
 						end
 					end)
 
@@ -1301,7 +1303,7 @@ function App.Load(settings)
 				obj.Changed:Connect(function(c)
 					if c == "Size" then
 						obj.Size = UDim2.new(1, -10, 0, obj.Size.Y.Offset)
-						
+
 						local Size = 0
 
 						for _,v in pairs(Frame2:GetChildren()) do
@@ -1319,7 +1321,7 @@ function App.Load(settings)
 					end
 				end)
 			end)
-			
+
 			Frame2.ChildRemoved:Connect(function()
 				local Size = 0
 
@@ -1443,7 +1445,7 @@ function App.Load(settings)
 
 						Debounce = false
 					end
-					
+
 					obj.Changed:Connect(function(c)
 						if c == "Size" then
 							obj.Size = UDim2.new(1, 0, 0, obj.Size.Y.Offset)
@@ -1549,18 +1551,18 @@ function App.Load(settings)
 					obj.Parent = Frame5
 				end
 			end
-			
+
 			function Returned:GetItems()
 				local i = 0
 				local list = {}
-				
+
 				for _,v in pairs(Frame5:GetChildren()) do
 					if v:IsA("Frame") or v:IsA("TextLabel") then
 						i = i + 1
 						list[i] = v
 					end
 				end
-				
+
 				return list
 			end
 
@@ -1570,14 +1572,14 @@ function App.Load(settings)
 		end
 
 		--
-		
+
 		Dragify(Gui.Drag)
-		
+
 		--
 
 		return Functions, Page
 	end
-	
+
 	--
 
 	return Functions, Gui
