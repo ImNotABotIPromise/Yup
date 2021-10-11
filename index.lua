@@ -1580,7 +1580,7 @@ function App.Load(settings)
 	
 	--
 
-	return Functions
+	return Functions, Gui
 end
 
 return App
