@@ -1395,7 +1395,7 @@ function App.Load(settings)
 			local Frame4 = Instance.new("Frame")
 			Frame4.Parent = Frame3
 			Frame4.BorderSizePixel = 0
-			Frame4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+			Frame4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 			Frame4.Size = UDim2.new(0, 1, 1, -5)
 			Frame4.Position = UDim2.new(0, -5, 0, 0)
 
