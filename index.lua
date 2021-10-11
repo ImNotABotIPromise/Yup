@@ -225,7 +225,7 @@ function createGui(settings)
 
 			wait(.3)
 
-			Drag:Destroy()
+			Gui:Destroy()
 			Debounce = false
 		else
 			game.TweenService:Create(Holder, TweenInfo.new(.3), {
@@ -234,7 +234,7 @@ function createGui(settings)
 
 			wait(.3)
 
-			Drag:Destroy()
+			Gui:Destroy()
 			Debounce = false
 		end
 	end)
