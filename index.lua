@@ -374,7 +374,7 @@ function App.Load(settings)
 		P_Frame.ChildAdded:Connect(function(v)
 			if v:IsA("Frame") or v:IsA("TextLabel") then
 				v.Changed:Connect(function(c)
-					if not c == "Size" or not c == "Visible" then return end
+					if string.find("size visible", string.lower(c)) then return end
 
 					local Size = 0
 
