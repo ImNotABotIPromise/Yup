@@ -1575,7 +1575,7 @@ function App.Load(settings)
 		
 		--
 
-		return Functions, Gui
+		return Functions, Page
 	end
 	
 	--
