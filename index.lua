@@ -1292,7 +1292,7 @@ function App.Load(settings)
 
 				for _,v in pairs(Frame2:GetChildren()) do
 					if v:IsA("Frame") or v:IsA("TextLabel") then
-						wait(.001)
+						wait(0)
 						Size = Size + v.Size.Y.Offset + 5
 						obj.Size = UDim2.new(1, -10, 0, obj.Size.Y.Offset)
 					end
@@ -1311,7 +1311,7 @@ function App.Load(settings)
 
 						for _,v in pairs(Frame2:GetChildren()) do
 							if v:IsA("Frame") or v:IsA("TextLabel") then
-								wait(.001)
+								wait(0)
 								v.Size = UDim2.new(1, -10, 0, v.Size.Y.Offset)
 								Size = Size + v.Size.Y.Offset + 5
 							end
@@ -1330,7 +1330,7 @@ function App.Load(settings)
 
 				for _,v in pairs(Frame2:GetChildren()) do
 					if v:IsA("Frame") or v:IsA("TextLabel") then
-						wait(.001)
+						wait(0)
 						Size = Size + v.Size.Y.Offset + 5
 						v.Size = UDim2.new(1, -10, 0, v.Size.Y.Offset)
 					end
@@ -1434,7 +1434,7 @@ function App.Load(settings)
 
 						for _,v in pairs(Frame5:GetChildren()) do
 							if v:IsA("Frame") or v:IsA("TextLabel") then
-								wait(.001)
+								wait(0)
 								Size = Size + v.Size.Y.Offset + 5
 								v.Size = UDim2.new(1, 0, 0, v.Size.Y.Offset)
 							end
@@ -1458,7 +1458,7 @@ function App.Load(settings)
 
 								for _,v in pairs(Frame5:GetChildren()) do
 									if v:IsA("Frame") or v:IsA("TextLabel") then
-										wait(.001)
+										wait(0)
 										Size = Size + v.Size.Y.Offset + 5
 										v.Size = UDim2.new(1, 0, 0, v.Size.Y.Offset)
 									end
@@ -1483,7 +1483,7 @@ function App.Load(settings)
 
 					for _,v in pairs(Frame5:GetChildren()) do
 						if v:IsA("Frame") or v:IsA("TextLabel") then
-							wait(.001)
+							wait(0)
 							Size = Size + v.Size.Y.Offset + 5
 							v.Size = UDim2.new(1, 0, 0, v.Size.Y.Offset)
 						end
@@ -1510,7 +1510,7 @@ function App.Load(settings)
 
 					for _,v in pairs(Frame5:GetChildren()) do
 						if v:IsA("Frame") or v:IsA("TextLabel") then
-							wait(.001)
+							wait(0)
 							Size = Size + v.Size.Y.Offset + 5
 						end
 					end
