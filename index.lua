@@ -381,7 +381,10 @@ function App.Load(settings)
 					for _,v in pairs(P_Frame:GetChildren()) do
 						if v:IsA("Frame") or v:IsA("TextLabel") then
 							wait(0)
-							Size = Size + (v.Size.Y.Offset + 5)
+
+							if v.Visible == true then
+								Size = Size + (v.Size.Y.Offset + 5)
+							end
 						end
 					end
 
